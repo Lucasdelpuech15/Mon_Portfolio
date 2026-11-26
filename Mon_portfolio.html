@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mon Portfolio</title>
+        <link rel="stylesheet" href="style2_final.css">
+    </head>
+    <body>
+        <header>
+            <h1>Mon Portfolio
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="menu-toggle-label">Menu</label>
+                <nav class="Liens">
+                    <a href="#Présentation" class="btn"> Accueil </a> 
+                    <a href="#Compétences" class="btn"> Compétences </a>
+                    <a href="#Formation" class="btn"> Formation </a>
+                    <a href="#Langues" class="btn"> Langues </a> 
+                    <a href="#Projets" class="btn"> Projets </a> 
+                    <a href="#Expériences" class="btn"> Expériences </a>
+                    <a href="#Centres_d_intérêt" class="btn"> Centres d'intérêt </a>
+                    <a href="#Contact" class="btn"> Contact </a>
+                </nav>
+            </h1>
+        </header>
+
+        <section id="Présentation"> 
+            <img src="Moi.png" alt="Ma photo" width="100" height="120" class="photo">
+            <h2>Bonjour je suis Lucas DELPUECH.</h2>
+            <p>Je suis un étudiant en BTS SIO option SLAM. J'ai déjà conçu des diiférents types de projets.</p> 
+            <p>Curieux et motivé, je suis intéressé pour améliorer mes compétences et les mettre à votre service.</p>
+        </section>
+
+        <section id="Compétences">
+            <h2> Compétences</h2>
+            <ul> 
+                <li class="reseau">Adressage IP</li>
+                <li class="developpement">CSS3</li>
+                <li class="mixte">Git & Gitlab</li>
+                <li class="developpement">HTML5</li>
+                <li class="reseau">Cisco Packet Tracer</li>
+                <li class="developpement">JavaScript</li>
+                <li class="mixte">Linux</li>
+                <li class="developpement">Python</li>
+                <li class="mixte">SQL</li>
+            </ul>
+            <p class="legende">
+                <span class="reseau">Réseau</span>
+                <span class="developpement">Développement</span>
+                <span class="mixte">Les deux</span>
+            </p>
+        </section>
+
+        <section id ="Formation">
+            <h2> Formation </h2>
+            <ul>
+                <li>BTS SIO option SLAM (en cours de formation)</li>
+                <li>Baccalauréat général au Lycée Emile Duclaux à Aurillac (2026)</li>
+                <li>Baccalauréat espagnol (Bachibac) (2026)</li>
+                <li>Diplôme National du Brevet (2023)</li>
+            </ul>
+        </section>
+
+        <section id = "Langues">
+            <h2> Langues </h2>
+            <ul>
+                <li>Français (langue maternelle)</li>
+                <li>Espagnol (Bon niveau Lu, parlé et écrit)</li>
+                <li>Anglais (Bon niveau Lu, parlé et écrit)</li>
+            </ul>
+        </section>
+
+        <section id="Projets">
+            <h2> Projets </h2>
+            <div class = "cartes">
+                <article class="card">
+                    <img src="FF.png" alt="Final Fantasy" width="150" height="100">
+                    <header> 
+                        <h3>Création d'un mini-jeu Final Fantasy en Python </h3> 
+                    </header>
+                    <p>Développement en python d'un mini Final Fantasy avec apparition de Monstres, diffèrents stages et coffres avec un combat de boss.</p>
+                    <a href="mon_projet" class="btn">Voir le projet</a>
+                </article>
+                <article class="card">
+                    <img src="ICCUR.jpg" alt="Jeu intéractif" width="150" height="100">
+                    <header>
+                        <h3>Création d'un jeu intéractif dans une page web</h3>
+                    </header>
+                    <p>Développement d’un jeu nommé Info Class Catch Up Rush dans une page web interactive où se mélent languages web et python.</p>
+                    <a href="https://d34dcastle.itch.io/info-class-catch-up-rush" class="btn">Voir le projet</a>
+                </article>
+                <article class="card">
+                    <img src="portfolio.png" alt="Portfolio numérique" width="150" height="100">
+                    <header>
+                        <h3>Création d'un portfolio numérique en HTML et CSS</h3>
+                    </header>
+                        <p>Conception d'un portfolio numérique ici présentpour présenter mes compétences et mes projets en HTML et CSS.</p>
+                        <a href="Mon_portfolio.html" class="btn">Voir le projet</a>
+                 </article>
+            </div>
+        </section>
+
+        <section id="Expériences">
+            <h2> Expériences </h2>
+            <ul>
+                <li>Période d'aide bénévole en tant que collaborateur polyvalent en Catalogne (2025)</li>
+                <li>Période d'aide bénévole en tant qu'Assistant de cuisine en Catalogne (2025)</li>
+                <li>Stage de Seconde réalisé chez Cash Express (2024)</li>
+                <li>Stage de 3ème au sein de l'école primaire d'Arpajon-Sur-Cère (2022)</li>
+            </ul>
+        </section>
+
+        <section id="Centres_d_intérêt">
+            <h2> Centres d'intérêt </h2>
+            <ul>
+                <li>Jeux vidéo et jeux de société</li>
+                <li>Programmation avec mes différents projets</li>
+                <li>Musique</li>
+                <li>Ping Pong</li>
+                <li>Rugby</li>
+                <li>Lecture</li>
+            </ul>
+        </section>
+
+        <section id="Contact">
+            <h2> Contact </h2>
+            <form method="post" action="login.php">
+                <p> Nom : <input type="text" name="nom" placeholder="Votre nom" required></p>
+                <p> Email : <input type="email" name="email" placeholder="Votre email" required></p>
+                <p> Message : </p>
+                <div class="message">
+                    <textarea name="message" placeholder="Votre message" required></textarea>
+                </div>
+                <br>
+                <div class="btn-envoi">
+                    <input type="submit" value="Envoyer">
+                    <input type="reset" value="Annuler">
+                </div>
+            </form>
+        </section>
+
+        <footer>
+            <p>© 2026 Lucas DELPUECH. Tous droits réservés.</p>
+            <a href="https://www.facebook.com/profile.php?id=61562209229315" target="_blank">
+                <img src="Facebook.jpg" alt="Facebook" width="30" height="30">
+            </a>
+            <a href="https://www.instagram.com/lucas.delpuech017/" target="_blank">
+                <img src="Instagram.jpg" alt="Instagram" width="30" height="30">
+            </a>
+            <a href="https://www.linkedin.com/in/lucas-delpuech-035a6a353/" target="_blank">
+                <img src="Linkedin.png" alt="LinkedIn" width="30" height="30">
+            </a>
+            <a href="https://github.com/Lucasdelpuech15" target="_blank">
+                <img src="github.png" alt="GitHub" width="30" height="30">
+            </a>
+        </footer>
+    </body>
+</html>

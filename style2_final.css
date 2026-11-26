@@ -1,0 +1,431 @@
+/* ================================
+   Thème sombre contrasté (proposition 2)
+   Cartes projets de la proposition 1
+   Compétences classées par couleur
+   ================================ */
+
+:root {
+  /* Thème général */
+  --fond: #111827;
+  --fond-secondaire: #1c2738;
+  --texte: #f8fafc;
+  --texte-secondaire: #cbd5e1;
+  --accent: #38bdf8;
+  --accent-secondaire: #fbbf24;
+  --bordure: #334155;
+
+  /* Cartes projets */
+  --carte-fond: #1a2030;
+  --carte-texte: #b8c0ce;
+  --carte-bordure: #30394b;
+  --carte-or: #d6a84f;
+  --carte-or-survol: #edc36e;
+  --carte-rayon: 16px;
+  --carte-ombre: 0 10px 28px rgba(0, 0, 0, 0.22);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 20px;
+  padding: 0;
+  background: var(--fond);
+  color: var(--texte);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.65;
+}
+
+/* ================================
+   En-tête et titres
+   ================================ */
+
+h1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0 35px;
+  padding: 18px 28px;
+  color: white;
+  background: linear-gradient(120deg, #075985, #0e7490);
+  border-left: 6px solid var(--accent-secondaire);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  font-size: 24px;
+}
+
+h2 {
+  margin: 38px 30px 18px;
+  padding-bottom: 8px;
+  color: var(--accent);
+  border-bottom: 2px solid #2563eb;
+  font-size: 25px;
+  text-align: left;
+}
+
+h3 {
+  margin: 24px 0 14px;
+  color: var(--accent-secondaire);
+  font-size: 20px;
+  text-align: center;
+}
+
+p {
+  margin: 22px 30px;
+  color: var(--texte-secondaire);
+}
+
+/* ================================
+   Images et contenu
+   ================================ */
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.photo {
+  float: right;
+  max-width: 42%;
+  margin: 20px;
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
+}
+
+/* ================================
+   Listes / compétences
+   ================================ */
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 30px;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  padding: 10px 20px;
+  color: white;
+  background: #173b59;
+  border: 1px solid #2876a5;
+  border-radius: 8px;
+  font-size: 17px;
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+li:hover {
+  filter: brightness(1.2);
+  transform: translateY(-2px);
+}
+
+/* Une couleur par catégorie */
+.reseau {
+  --couleur: #38bdf8;          /* bleu */
+  --couleur-fond: #0c4a6e;
+}
+
+.developpement {
+  --couleur: #4ade80;          /* vert */
+  --couleur-fond: #14532d;
+}
+
+.mixte {
+  --couleur: #a78bfa;          /* violet */
+  --couleur-fond: #4c1d95;
+}
+
+li.reseau,
+li.developpement,
+li.mixte {
+  background: var(--couleur-fond);
+  border: 2px solid var(--couleur);
+}
+
+/* Légende des couleurs */
+.legende {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.legende span::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 8px;
+  background: var(--couleur);
+  border-radius: 50%;
+}
+
+/* ================================
+   Navigation et boutons
+   ================================ */
+
+.Liens {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 22px;
+  color: #082f49;
+  background: var(--accent);
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.2s ease;
+  border-left: 6px solid var(--accent-secondaire); /* le rebord jaune */
+}
+
+.btn:hover {
+  color: white;
+  background: #0369a1;
+  border-color: #7dd3fc;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(56, 189, 248, 0.2);
+}
+
+.Liens .btn {
+  margin-top: 0;
+}
+
+/* ================================
+   Cartes projets (proposition 1)
+   ================================ */
+
+.cartes {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+  margin: 24px 30px;
+}
+
+.card {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  min-width: 0;
+  padding: 20px;
+  background: var(--carte-fond);
+  border: 1px solid var(--carte-bordure);
+  border-radius: var(--carte-rayon);
+  box-shadow: var(--carte-ombre);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--carte-or);
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: 190px;
+  margin: 0 0 16px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 24px 0 12px;
+  color: var(--carte-or);
+  font-size: 1.2rem;
+}
+
+.card p {
+  margin: 8px 0 18px;
+  color: var(--carte-texte);
+}
+
+.card .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: auto;
+  padding: 11px 20px;
+  color: #171717;
+  background: var(--carte-or);
+  border: 1px solid var(--carte-or);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.card .btn:hover {
+  color: #171717;
+  background: var(--carte-or-survol);
+  border-color: var(--carte-or-survol);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(214, 168, 79, 0.2);
+}
+
+/* ================================
+   Formulaire de contact
+   ================================ */
+
+.message {
+  margin: 20px 30px;
+}
+
+input,
+textarea,
+select {
+  max-width: 100%;
+  padding: 12px 14px;
+  color: var(--texte);
+  background: var(--fond-secondaire);
+  border: 1px solid var(--bordure);
+  border-radius: 8px;
+  font: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.btn-envoi {
+  margin: 20px 30px;
+}
+
+/* ================================
+   Menu responsive
+   ================================ */
+
+.menu-toggle,
+.menu-toggle-label {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  body {
+    margin: 12px;
+  }
+
+  h1 {
+    gap: 10px;
+    padding: 15px 18px;
+    font-size: 20px;
+  }
+
+  h2 {
+    margin: 28px 10px 15px;
+    font-size: 22px;
+  }
+
+  p {
+    margin: 18px 10px;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+
+  .menu-toggle-label {
+    display: block;
+    margin-left: auto;
+    padding: 8px 14px;
+    color: white;
+    background: #075985;
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .Liens {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 8px;
+    padding-top: 12px;
+  }
+
+  .menu-toggle:checked + .menu-toggle-label + .Liens {
+    display: flex;
+  }
+
+  .Liens .btn {
+    display: block;
+    margin: 0;
+    padding: 12px;
+    text-align: center;
+  }
+
+  .cartes {
+    flex-direction: column;
+    gap: 16px;
+    margin: 20px 10px;
+  }
+
+  .card {
+    flex-basis: auto;
+  }
+
+  .card img {
+    height: auto;
+    max-height: 240px;
+  }
+
+  .photo {
+    float: none;
+    display: block;
+    max-width: 100%;
+    margin: 18px auto;
+  }
+
+  ul {
+    gap: 8px;
+    margin: 20px 10px;
+  }
+
+  li {
+    padding: 8px 14px;
+    font-size: 15px;
+  }
+
+  .message,
+  .btn-envoi {
+    margin: 18px 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
